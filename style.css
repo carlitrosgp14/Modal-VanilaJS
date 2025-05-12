@@ -36,9 +36,18 @@ h1 {
   background-color: #e6c409;
 }
 
-/* Modal styles */
+/* Adding a Fade In/ Fade Out effect: incorporating feedback from a peer developer */
+
+.overlay,
 .modal {
   position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Modal styles */
+.modal {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -65,7 +74,6 @@ h1 {
 }
 
 .overlay {
-  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -74,7 +82,8 @@ h1 {
   z-index: 5;
 }
 
-/* Utility class */
-.hidden {
-  display: none;
+.modal.visible,
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
 }

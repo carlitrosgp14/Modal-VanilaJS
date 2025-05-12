@@ -6,13 +6,13 @@ const btnCloseModal = document.querySelector(".btn--close-modal");
 const overlay = document.querySelector(".overlay");
 
 const openModal = function () {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
+  modal.classList.add("visible");
+  overlay.classList.add("visible");
 };
 
 const closeModal = function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
+  modal.classList.remove("visible");
+  overlay.classList.remove("visible");
 };
 
 // Functionality to open the Modal with the button
@@ -29,7 +29,7 @@ overlay.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", function (e) {
   console.log(e.key);
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+  if (e.key === "Escape" && modal.classList.contains("visible")) {
     closeModal();
   }
 });
