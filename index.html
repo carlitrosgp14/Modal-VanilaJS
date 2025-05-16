@@ -19,8 +19,24 @@
     <!-- Modal -->
     <div class="modal">
       <button class="btn--close-modal">&times;</button>
-      <h2>🚀 Hello!</h2>
-      <p>This is a custom modal window. You can close me in several ways!</p>
+      <h2>Contact Us!</h2>
+      <form class="modal-form">
+        <label for="name"> Name: </label>
+        <input type="text" id="name" placeholder="Your name" required />
+
+        <label for="email"> Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="email@example.com"
+          required
+        />
+
+        <label for="message"> Message:</label>
+        <textarea id="message" placeholder="Your message" rows="4"> </textarea>
+
+        <button type="submit" class="btn-submit">Send</button>
+      </form>
     </div>
 
     <!-- Overlay -->
